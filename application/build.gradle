@@ -42,7 +42,8 @@ def buildConfig() {
 configure(subprojects) {
     apply from: "${rootDir}/gradle/versioning.gradle"
     apply from: "${rootDir}/gradle/assemble.gradle"
-
+    apply from: "${rootDir}/gradle/checkstyle.gradle"
+ 
     buildConfig()
     apply from: "${rootDir}/gradle/artifactory.gradle"
     artifactoryPublish.dependsOn build
